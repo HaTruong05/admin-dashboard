@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: #14b8a6;
+    --card-color: orange;
+    --white: #f8fafc;
+    --slate: #e2e8f0;
+}
+
 html, body {
     height: 100%;
 }
@@ -13,21 +20,21 @@ body {
 }
 
 body {
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 3.5fr;
+    grid-template-rows: 1.5fr 4.5fr;
 }
 
 .sidebar {
-    background-color: #14b8a6;
+    background-color: var(--main-color);
     grid-row: 1 / -1;
 }
 
 .header {
-    background-color: #f8fafc;
+    background-color: var(--white);
     height: 100%;
 }
 
 .main-content {
-    background-color: #e2e8f0;
+    background-color: var(--slate);
     height: 100%;
 }
