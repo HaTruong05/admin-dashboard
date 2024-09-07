@@ -18,7 +18,7 @@ html, body {
     height: 100%;
 }
 
-body, .sidebar, .nav1, .nav2 {
+body, .sidebar, .nav1, .nav2, .dashboard {
     display: grid;
 
 }
@@ -32,8 +32,7 @@ body {
     background-color: var(--main-color);
     grid-row: 1 / -1;
     color: var(--white);
-    grid-template-rows: 1fr 7fr 8fr;
-    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 7fr 7fr;
 }
 
 .header {
@@ -46,11 +45,18 @@ body {
     height: 100%;
 }
 
-.nav1, .nav2 {
-    grid-column: 1 / -1;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(6, 1fr);
+.dashboard, .nav1, .nav2 {
+    grid-template-columns: 2fr 4fr;
     align-items: center;
+}
+
+.dashboard {
+    margin: 24px 0;
+}
+
+.nav1, .nav2 {
+    grid-template-rows: repeat(6, 15%);
+    font-weight: bold;
 }
 
 .nav1 {
@@ -61,14 +67,16 @@ body {
     grid-row: 3 / 4;
 }
 
-/* .sidebar ul {
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(6, 1fr);
-    height: 100%;
-} */
-
 .sidebar p {
     font-size: 1.25rem;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+}
+
+.dashboard svg {
+    width: 2.75rem;
 }
 
 .sidebar svg {
