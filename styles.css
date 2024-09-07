@@ -20,7 +20,8 @@ html, body {
 }
 
 body, .sidebar, .nav1, .nav2, .dashboard, .header,
-.search-bar, .quick-actions, .user-profile, .content-actions {
+.search-bar, .quick-actions, .user-profile, .content-actions,
+.main-content {
     display: grid;
 }
 
@@ -45,6 +46,8 @@ body {
     background-color: var(--slate);
     height: 100%;
     box-shadow: inset 6px 10px 10px -10px #9ca3af;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .dashboard, .nav1, .nav2 {
@@ -167,4 +170,8 @@ button {
     border-radius: 16px;
     color: var(--white);
     font-weight: bold;
+}
+
+.projects {
+    grid-row: 1 / -1;
 }
