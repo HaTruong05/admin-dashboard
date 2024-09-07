@@ -20,7 +20,7 @@ html, body {
 }
 
 body, .sidebar, .nav1, .nav2, .dashboard, .header,
-.search-bar, .quick-actions {
+.search-bar, .quick-actions, .user-profile, .content-actions {
     display: grid;
 }
 
@@ -44,6 +44,7 @@ body {
 .main-content {
     background-color: var(--slate);
     height: 100%;
+    box-shadow: inset 6px 10px 10px -10px #9ca3af;
 }
 
 .dashboard, .nav1, .nav2 {
@@ -85,10 +86,14 @@ svg {
 }
 
 img {
-    width: 3rem;
+    width: 4rem;
     padding: 6%;
     background-color: var(--light-red);
     border-radius: 50%;
+}
+
+.small-icons {
+    width: 3rem;
 }
 
 .sidebar svg {
@@ -131,4 +136,35 @@ input[type="search"] {
     justify-self: center;
     align-items: center;
     column-gap: 32px;
+}
+
+.user-profile {
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+    column-gap: 16px;
+    margin: 0px 40px;
+}
+
+.user-profile img {
+    grid-row: 1 / -1;
+}
+
+.user-profile h5 {
+    align-self: end;
+}
+
+.content-actions {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+
+button {
+    border: none;
+    background-color: var(--main-color);
+    width: 6rem;
+    height: 2rem;
+    border-radius: 16px;
+    color: var(--white);
+    font-weight: bold;
 }
