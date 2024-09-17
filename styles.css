@@ -92,9 +92,9 @@ svg {
 
 img {
     width: 4rem;
-    padding: 6%;
+    padding: 4px;
     background-color: var(--light-red);
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .small-icons {
