@@ -23,7 +23,7 @@ html, body {
 
 body, .sidebar, .nav1, .nav2, .dashboard, .header,
 .search-bar, .quick-actions, .user-profile, .content-actions,
-.main-content, .cards, .card, .text {
+.main-content, .cards, .card, .text, .accounts, .user {
     display: grid;
 }
 
@@ -36,7 +36,8 @@ body {
     background-color: var(--main-color);
     grid-row: 1 / -1;
     color: var(--white);
-    grid-template-rows: 1fr 7fr 7fr;
+    grid-template-rows: 1fr 6fr 3fr 7fr;
+    row-gap: 48px;
 }
 
 .header {
@@ -58,20 +59,19 @@ body {
 }
 
 .dashboard {
-    margin: 24px 0;
+    margin-top: 24px;
 }
 
 .nav1, .nav2 {
-    grid-template-rows: repeat(6, 15%);
     font-weight: bold;
 }
 
 .nav1 {
-    grid-row: 2 / 3;
+    grid-template-rows: repeat(6, 1fr);
 }
 
 .nav2 {
-    grid-row: 3 / 4;
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .sidebar p {
@@ -94,7 +94,7 @@ img {
     width: 4rem;
     padding: 4px;
     background-color: var(--light-red);
-    /* border-radius: 50%; */
+    border-radius: 50%;
 }
 
 .small-icons {
@@ -193,7 +193,7 @@ button {
 
 .card, .accounts {
     background-color: var(--white);
-    box-shadow: 1px 1px 5px -1px var(--light-gray);
+    box-shadow: 5px 5px 8px -5px var(--light-gray);
 }
 
 .content {
@@ -202,8 +202,13 @@ button {
     box-shadow: 1px 1px 5px -1px var(--light-gray);
 }
 
-.content, .accounts {
-    height: 92.25%;
+.accounts {
+    height: 81.61%;
+    border-radius: 8px;
+}
+
+.content {
+    height: 92.5%;
     border-radius: 8px;
 }
 
@@ -222,8 +227,12 @@ button {
     margin-left: 24px;
 }
 
-.announcements, .trending {
-    padding: 24px 32px 24px 8px;
+.trending, .announcements {
+    padding: 24px 32px 0 8px;
+}
+
+.trending {
+    margin-top: 23px;
 }
 
 .text {
@@ -250,4 +259,39 @@ button {
     color: var(--dark-gray);
 }
 
+.user:nth-child(1) img {
+    background-color: #9ab1ae;
+}
 
+.user:nth-child(3) img {
+    background-color: #dfb885;
+}
+
+.user:nth-child(4) img {
+    background-color: #e3bfb9;
+}
+
+.accounts {
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.user {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.user img {
+    grid-row: 1 / -1;
+    align-self: center;
+    justify-self: center;
+}
+
+.user h5 {
+    align-self: end;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.user p {
+    color: var(--dark-gray);
+}
